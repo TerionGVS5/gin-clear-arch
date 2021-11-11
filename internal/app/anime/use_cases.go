@@ -1,14 +1,13 @@
-package services
+package anime_service
 
 type AnimeStorage interface {
 	GetAnimeList() []Anime
 }
 
-type AnimeListUseCase struct{
+type AnimeListUseCase struct {
 	Repo AnimeStorage
 }
 
 func (useCase AnimeListUseCase) GetAnimeList() []Anime {
 	return useCase.Repo.GetAnimeList()
 }
-
