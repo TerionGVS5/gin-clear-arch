@@ -8,7 +8,7 @@ import (
 func main() {
 	router := gin.Default()
 	router.GET("/anime/", api.GetAnimeList)
-	err := router.Run("localhost:8080")
+	err := router.Run("0.0.0.0:8000")
 	if err != nil {
 		return
 	}

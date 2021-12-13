@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+
+  app-gin-clear-arch-dev:
+    container_name: app-gin-clear-arch-dev
+    image: app-gin-clear-arch-dev
+    build:
+      context: ../
+      dockerfile: deployments/Dockerfile
+    volumes:
+      - ../:/app
+    ports:
+      - "8080:8000"
